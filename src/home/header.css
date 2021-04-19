@@ -1,0 +1,35 @@
+.header{
+height:32vh;
+/* background-color: #fad97d   ; */
+/* background-color: black; */
+background: linear-gradient(to bottom,#f1e5ce, #b99a42 100% ); 
+/* background: linear-gradient(to bottom,#f0d281, #ac8f3e 100% ); */
+/* color:white; */
+
+}
+
+#title {
+    font-family: 'Indie Flower', cursive;
+    background-color: rgb(255, 255, 255);
+    text-shadow: 0px 2px 4px rgb(252, 46, 46),
+    0px 4px 5px orange,
+    0px 6px 8px #ffff00;
+
+    font-weight:700;
+    /* text-shadow: 0px 4px 6px orange,
+                 0px 10px 16px yellow;              */     
+    }
+
+    .label{
+        width: 120px;
+    }
+
+    hr {
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        width: 91%;
+        color: blue;
+        clear:5%;
+        }
+    
