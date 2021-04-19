@@ -33,3 +33,9 @@ background: linear-gradient(to bottom,#f1e5ce, #b99a42 100% );
         clear:5%;
         }
     
+
+        @media (max-width: 700px){
+            .header{
+                height:40vh;
+            }
+        }

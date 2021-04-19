@@ -7,7 +7,7 @@ export const HomeBody = () => {
     const [groceryItem, setGroceryItem] = useState([]);
 
     useEffect(() => {
-        axios.get("https://192.168.0.4:3001/getgrocery").then((res, req) => {
+        axios.get("https://saharserver.herokuapp.com/getgrocery").then((res, req) => {
 
             setGroceryItem(res.data);
 

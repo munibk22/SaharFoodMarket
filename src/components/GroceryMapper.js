@@ -5,7 +5,7 @@ export const GroceryMapper = (props) => {
         <div>
 
 
-            <div className="flexwrap justifyaround">
+            <div className="flexwrap justify">
                 {props.groceryItem.map((grocery) => {
                     return <div className="marginright2 margintop " key={grocery.groceryID} style={{ maxWidth: '' }} >
 
@@ -16,7 +16,7 @@ export const GroceryMapper = (props) => {
                                 {grocery.groceryTitle}-{grocery.grocerySize}
                             </div>
 
-                            <img className=" " style={{ width: "190px", height: '180px' }} src={grocery.groceryUrl} alt='grocery url' />
+                            <img className=" " style={{ width: "195px", height: '200px', objectFit: 'contain' }} src={grocery.groceryUrl} alt='grocery url' />
 
                             <div className="margintop">
                                 ${grocery.groceryCost}

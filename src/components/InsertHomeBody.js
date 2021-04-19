@@ -11,7 +11,7 @@ export const InsertHomeBody = () => {
     const [groceryCost, setGroceryCost] = useState(0)
 
     useEffect(() => {
-        axios.get("https://192.168.0.4:3001/getgrocery")
+        axios.get("https://saharserver.herokuapp.com/getgrocery")
             .then((res) => {
                 console.log(res.data);
 
@@ -47,7 +47,7 @@ export const InsertHomeBody = () => {
     const submitHandler = () => {
         console.log("I was clicked to Submit");
         axios.post(
-            "http://localhost:3001/postgrocery", { groceryCo, groceryTitle, grocerySize, groceryUrl, groceryCost })
+            "https://saharserver.herokuapp.com/postgrocery", { groceryCo, groceryTitle, grocerySize, groceryUrl, groceryCost })
             .then(() => {
                 console.log("success");
                 setGroceryUrl("")

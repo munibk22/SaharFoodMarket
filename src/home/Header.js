@@ -31,7 +31,7 @@ export const Header = () => {
                 <hr></hr>
             </div>
 
-            <div style={{ align: 'center' }}>
+            <div style={{ align: 'center', marginBottom: '1%' }}>
                 <h5>Welcome to our Organic and International Foods Store ☪   </h5>
                 <address><a href="https://www.google.com/maps?q=6831+Angola+Rd+Holland,+OH+43528&rlz=1C1CHBF_enUS819US822&um=1&ie=UTF-8&sa=X&ved=2ahUKEwix47j70LPnAhWYK80KHaphCv8Q_AUoAXoECAwQAw" alt="store address"
                     target="_blank" rel="noreferrer">
