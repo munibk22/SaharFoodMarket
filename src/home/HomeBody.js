@@ -16,7 +16,7 @@ export const HomeBody = () => {
 
     return (
         <div className="App width70 padding1 " style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
-            <h1>Grocery Itemsaa</h1>
+            <h1>Grocery Items</h1>
             <div className="">
                 <GroceryMapper groceryItem={groceryItem} />
                 {/* {groceryItem} */}
