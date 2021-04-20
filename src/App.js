@@ -8,6 +8,7 @@ import { HomeBody } from './home/HomeBody';
 import { Rice } from './components/Rice';
 import { InsertHomeBody } from './components/InsertHomeBody';
 import { InsertList } from './components/InsertList';
+import { PostRice } from './components/PostRice';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
           <Route path="/rice" component={Rice} />
           <Route path="/inserthomebody" component={InsertHomeBody} />
           <Route path="/insert" component={InsertList} />
+          <Route path="/postrice" component={PostRice} />
+
 
         </div>
 

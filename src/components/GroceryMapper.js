@@ -16,7 +16,7 @@ export const GroceryMapper = (props) => {
                                 {grocery.groceryTitle}-{grocery.grocerySize}
                             </div>
 
-                            <img className=" " style={{ width: "195px", height: '200px', objectFit: 'contain' }} src={grocery.groceryUrl} alt='grocery url' />
+                            <img className=" " style={{ width: "200px", height: '200px', objectFit: 'contain' }} src={grocery.groceryUrl} alt='grocery url' />
 
                             <div className="margintop">
                                 ${grocery.groceryCost}

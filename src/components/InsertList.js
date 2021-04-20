@@ -8,20 +8,24 @@ export const InsertList = () => {
             <Link className="btn btn-danger" to="/inserthomebody">Insert Groceries</Link>
 
             <div className="margintop">
-                <Link className="btn btn-danger" to="/insertflours">Insert Flours</Link>
+                <Link className="btn btn-danger" to="/postflours">Insert Flours</Link>
             </div>
             <div className="margintop">
-                <Link className="btn btn-danger" to="/insertbreads">Insert Breads
+                <Link className="btn btn-danger" to="/postbreads">Insert Breads
 </Link>
             </div>
             <div className="margintop">
-                <Link className="btn btn-danger" to="/insertlentils">Insert Lentils</Link>
+                <Link className="btn btn-danger" to="/postlentils">Insert Lentils</Link>
             </div>
             <div className="margintop">
-                <Link className="btn btn-danger" to="/insertoils">Insert Oils</Link>
+                <Link className="btn btn-danger" to="/postoils">Insert Oils</Link>
             </div>
             <div className="margintop">
-                <Link className="btn btn-danger" to="/insertspices">Insert Spices</Link>
+                <Link className="btn btn-danger" to="/postspices">Insert Spices</Link>
+            </div>
+
+            <div className="margintop">
+                <Link className="btn btn-danger" to="/postrice">Insert Rices</Link>
             </div>
         </div>
     )
