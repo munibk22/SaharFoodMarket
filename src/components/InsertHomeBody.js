@@ -10,13 +10,6 @@ export const InsertHomeBody = () => {
     const [groceryUrl, setGroceryUrl] = useState("");
     const [groceryCost, setGroceryCost] = useState(0)
 
-    useEffect(() => {
-        axios.get("https://saharserver.herokuapp.com/getgrocery")
-            .then((res) => {
-                console.log(res.data);
-
-            })
-    }, [])
 
     const coHandler = (e) => {
         setGroceryCo(e.target.value);

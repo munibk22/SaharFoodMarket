@@ -73,6 +73,11 @@ width:80vw;
                             width:15vw;
                             
                             }
+
+                            .width10{
+                                width:10vw;
+                                
+                                }
     .max2000{
         max-width: 2000px !important;
     }
