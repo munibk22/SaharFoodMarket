@@ -11,6 +11,7 @@ import { InsertList } from './components/InsertList';
 import { PostRice } from './components/PostRice';
 import { Lentils } from './components/Lentils';
 import { PostLentil } from './components/PostLentil';
+import { PostOil } from './components/PostOil';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/postrice" component={PostRice} />
           <Route path="/lentils" component={Lentils} />
           <Route path="/postlentils" component={PostLentil} />
+          <Route path="/postoils" component={PostOil} />
 
 
 
