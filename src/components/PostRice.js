@@ -38,7 +38,8 @@ export const PostRice = () => {
 
     const submitHandler = () => {
         console.log("Clicked" + riceCo);
-        axios.post("https://saharserver.herokuapp.com/postrice", { riceCo })
+        axios.post("https://saharserver.herokuapp.com/postrice",
+            { riceCo, riceTitle, riceSize, riceUrl, riceCost })
             .then((err, res) => {
                 if (!res) {
                     console.log("There was the following err :" + err);
@@ -72,8 +73,8 @@ export const PostRice = () => {
 
 
             <div className="flex margintop justifyaround width20">
-                <label htmlFor="Size" className="width15">Rice Size</label>
-                <input type='text' name='size' id='Size' value={riceSize}
+                <label htmlFor="size" className="width15">Rice Size</label>
+                <input type='text' name='size' id='size' value={riceSize}
                     onChange={ricesizeHandler}
                 />
             </div>

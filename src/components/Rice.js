@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { MapperRice } from './MapperRice';
+import { MapperRice } from '../mapper/MapperRice';
 
 
 
@@ -25,7 +25,7 @@ export const Rice = () => {
             <div className="textalign">
                 <h1> Rices</h1>
             </div>
-            <div className="flexwrap justify width70 ">
+            <div className="flex justifyevenwrap width70 ">
                 <MapperRice riceItem={riceItem} />
             </div>
         </div>

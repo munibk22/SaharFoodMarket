@@ -9,6 +9,8 @@ import { Rice } from './components/Rice';
 import { InsertHomeBody } from './components/InsertHomeBody';
 import { InsertList } from './components/InsertList';
 import { PostRice } from './components/PostRice';
+import { Lentils } from './components/Lentils';
+import { PostLentil } from './components/PostLentil';
 
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
           <Route path="/inserthomebody" component={InsertHomeBody} />
           <Route path="/insert" component={InsertList} />
           <Route path="/postrice" component={PostRice} />
+          <Route path="/lentils" component={Lentils} />
+          <Route path="/postlentils" component={PostLentil} />
+
 
 
         </div>
