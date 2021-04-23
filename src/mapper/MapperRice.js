@@ -2,7 +2,7 @@ import React from 'react'
 
 export const MapperRice = (props) => {
     return (
-        <div className="flexwrap justifyeven" style={{ maxWidth: '1200px' }}>
+        <div className="flexwrap justifybetween" style={{ maxWidth: '1200px' }}>
 
             {props.riceItem.map((rice) => {
                 return <div className="marginright2 margintop" key={rice.idRice}>

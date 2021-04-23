@@ -5,7 +5,7 @@ export const LentilMapper = (props) => {
         <div>
 
 
-            <div className="flexwrap justify">
+            <div className="flexwrap justifybetween" style={{ maxWidth: '1200px' }}>
                 {props.lentilItem.map((lentil) => {
                     return <div className="marginright2 margintop " key={lentil.lentilId} style={{ maxWidth: '' }} >
 

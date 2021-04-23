@@ -25,7 +25,7 @@ export const Lentils = () => {
                 <h1> Lentils</h1>
             </div>
 
-            <div className="flex justifyevenwrap width70">
+            <div className="  width70">
                 <LentilMapper lentilItem={lentilItem} />
             </div>
         </div>
