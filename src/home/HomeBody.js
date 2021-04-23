@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import { GroceryMapper } from '../components/GroceryMapper';
+import { GroceryMapper } from '../mapper/GroceryMapper';
 
 
 export const HomeBody = () => {
@@ -17,7 +17,7 @@ export const HomeBody = () => {
     return (
         <div className="App width70 padding1 " style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
             <h1>Grocery Items</h1>
-            <div className="">
+            <div className="width70">
                 <GroceryMapper groceryItem={groceryItem} />
                 {/* {groceryItem} */}
             </div>

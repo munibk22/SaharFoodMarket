@@ -5,13 +5,13 @@ export const LentilMapper = (props) => {
         <div>
 
 
-            <div className="flexwrap justifybetween" style={{ maxWidth: '1200px' }}>
+            <div className="flexwrap " style={{ maxWidth: '1200px' }}>
                 {props.lentilItem.map((lentil) => {
-                    return <div className="marginright2 margintop " key={lentil.lentilId} style={{ maxWidth: '' }} >
+                    return <div className="marginright2 margintop " key={lentil.lentilId} style={{ marginLeft: '' }} >
 
                         <div className="flexcol alignitems" style={{ width: '210px', }}>
 
-                            <div className="" style={{ height: '4rem', }}>
+                            <div className="flex justify aligntext" style={{ height: '4rem', }}>
                                 {lentil.lentilCo}  {' '}
                                 {lentil.lentilTitle}-{lentil.lentilSize}
                             </div>

@@ -19,9 +19,10 @@ export const Lentils = () => {
 
 
     return (
-        <div style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
+        <div className="padding1"
+            style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
 
-            <div className="textalign">
+            <div className="textalign ">
                 <h1> Lentils</h1>
             </div>
 

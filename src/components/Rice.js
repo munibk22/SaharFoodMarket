@@ -20,12 +20,12 @@ export const Rice = () => {
 
 
     return (
-        <div className=" " style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
+        <div className="padding1 " style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
 
-            <div className="textalign">
+            <div className="textalign ">
                 <h1> Rices</h1>
             </div>
-            <div className="flex justifyevenwrap width70 ">
+            <div className=" width70 ">
                 <MapperRice riceItem={riceItem} />
             </div>
         </div>

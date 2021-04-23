@@ -5,9 +5,10 @@ export const GroceryMapper = (props) => {
         <div>
 
 
-            <div className="flexwrap justify">
+            <div className="flexwrap " style={{ maxWidth: '1200px' }}>
+
                 {props.groceryItem.map((grocery) => {
-                    return <div className="marginright2 margintop " key={grocery.groceryID} style={{ maxWidth: '' }} >
+                    return <div className="marginright2 margintop " key={grocery.groceryID} >
 
                         <div className="flexcol alignitems" style={{ width: '210px', }}>
 
