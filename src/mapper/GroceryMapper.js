@@ -5,7 +5,7 @@ export const GroceryMapper = (props) => {
         <div>
 
 
-            <div className="flexwrap " style={{ maxWidth: '1200px' }}>
+            <div className="flexwrap justify" style={{ maxWidth: '1200px' }}>
 
                 {props.groceryItem.map((grocery) => {
                     return <div className="marginright2 margintop " key={grocery.groceryID} >
