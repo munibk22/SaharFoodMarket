@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { Home } from './home/Home';
 import { NaviBar } from './components/NaviBar';
 import { Header } from './home/Header';
-import { HomeBody } from './home/HomeBody';
+// import { HomeBodyC } from './home/HomeBodyC';
 import { Rice } from './components/Rice';
 import { InsertHomeBody } from './components/InsertHomeBody';
 import { InsertList } from './components/InsertList';
@@ -12,10 +12,12 @@ import { PostRice } from './components/PostRice';
 import { Lentils } from './components/Lentils';
 import { PostLentil } from './components/PostLentil';
 import { PostOil } from './components/PostOil';
-import { CartHeader } from './components/CartHeader';
+import { CartHeader } from './cart/CartHeader';
+import { Checkout } from './cart/Checkout';
 
 
 function App() {
+  function test() { console.log("test") }
   return (
 
     <BrowserRouter>
@@ -28,7 +30,7 @@ function App() {
 
 
         <div className="flex justify" style={{}}>
-          <Route exact path="/" component={HomeBody} />
+          <Route exact path="/" component={Home} />
           <Route path="/rice" component={Rice} />
           <Route path="/inserthomebody" component={InsertHomeBody} />
           <Route path="/insert" component={InsertList} />
@@ -37,6 +39,7 @@ function App() {
           <Route path="/postlentils" component={PostLentil} />
           <Route path="/postoils" component={PostOil} />
           <Route path="/cart" component={CartHeader} />
+          <Route path="/checkout" component={Checkout} />
 
 
 

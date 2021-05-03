@@ -1,13 +1,15 @@
 import React from 'react'
 
 export const GroceryMapper = (props) => {
+    const { onAdd, groceryItem } = props;
+    const test = () => { console.log("test"); }
     return (
         <div>
 
 
             <div className="flexwrap justify" style={{ maxWidth: '1200px' }}>
 
-                {props.groceryItem.map((grocery) => {
+                {groceryItem.map((grocery) => {
                     return <div className="marginright2 margintop " key={grocery.groceryID} >
 
                         <div className="flexcol alignitems" style={{ width: '210px', }}>
@@ -23,9 +25,9 @@ export const GroceryMapper = (props) => {
                                 ${grocery.groceryCost}
                             </div>
 
-                            <div className="margintop">
 
-                                <button className="btn btn-warning" >Add to Cart</button>
+                            <div className="margintop">
+                                <button className="btn btn-warning" onClick={(grocery) => onAdd(grocery)} key={grocery.groceryID} >Add to Cart</button>
                             </div>
 
                         </div>
@@ -34,6 +36,6 @@ export const GroceryMapper = (props) => {
                 })}
             </div>
 
-        </div>
+        </div >
     )
 }

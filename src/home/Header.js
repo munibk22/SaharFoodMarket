@@ -1,21 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.css';
 import Pak from "../pics/pak.png";
 import Palm from "../pics/palmtree3.png";
-import { CartNav } from './CartNav';
+import { CartNav } from '../cart/CartNav';
+import { Link } from 'react-router-dom';
 
 
 
 
 
-export const Header = () => {
+export const Header = (props) => {
+
+
 
     return (
 
         <div className="" >
-            <div className="" style={{ marginRight: "15px" }}>
+
+            <Link to="/cart" className="" style={{ marginRight: "15px" }}>
                 <CartNav />
-            </div>
+            </Link>
 
             <div className="header App flexcol alignitems  " style={{ marginTop: '2%' }}>
 
