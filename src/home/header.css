@@ -8,6 +8,14 @@ background: linear-gradient(to bottom,#f1e5ce, #b99a42 100% );
 
 }
 
+.footernav{
+    background-color: #007bff!important;
+    height:5vh ;
+    color:#ffff;
+    
+
+}
+
 #title {
     font-family: 'Indie Flower', cursive;
     background-color: rgb(255, 255, 255);

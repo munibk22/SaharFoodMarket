@@ -14,6 +14,7 @@ import { PostLentil } from './components/PostLentil';
 import { PostOil } from './components/PostOil';
 import { CartHeader } from './cart/CartHeader';
 import { Checkout } from './cart/Checkout';
+import { Footer } from './home/Footer';
 
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
 
         </div>
 
-
+        <Footer />
       </div>
     </BrowserRouter>
   );
