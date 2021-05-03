@@ -10,24 +10,24 @@ export const GroceryMapper = (props) => {
             <div className="flexwrap justify" style={{ maxWidth: '1200px' }}>
 
                 {groceryItem.map((grocery) => {
-                    return <div className="marginright2 margintop " key={grocery.groceryID} >
+                    return <div key={grocery.id} className="marginright2 margintop " >
 
                         <div className="flexcol alignitems" style={{ width: '210px', }}>
 
                             <div className="" style={{ height: '4rem', }}>
-                                {grocery.groceryCo}  {' '}
-                                {grocery.groceryTitle}-{grocery.grocerySize}
+                                {grocery.name}  {' '}
+                                {grocery.title}-{grocery.size}
                             </div>
 
-                            <img className=" " style={{ width: "200px", height: '200px', objectFit: 'contain' }} src={grocery.groceryUrl} alt='grocery url' />
+                            <img className=" " style={{ width: "200px", height: '200px', objectFit: 'contain' }} src={grocery.img} alt='grocery url' />
 
                             <div className="margintop">
-                                ${grocery.groceryCost}
+                                ${grocery.cost}
                             </div>
 
 
                             <div className="margintop">
-                                <button className="btn btn-warning" onClick={(grocery) => onAdd(grocery)} key={grocery.groceryID} >Add to Cart</button>
+                                <button className="btn btn-warning" onClick={() => onAdd(grocery)} key={grocery.id}>Add to Cart</button>
                             </div>
 
                         </div>

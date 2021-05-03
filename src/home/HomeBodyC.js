@@ -15,12 +15,31 @@ export const HomeBodyC = (props) => {
     }, [])
 
     return (
-        <div className="App width70 padding1 " style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
+        <div className="App  padding1 container" style={{ border: '4px solid wheat', backgroundColor: 'white', maxWidth: '1200px' }}>
             <h1>Grocery Items</h1>
             {/* <button className="btn btn-warning" onClick={onAdd}>test to Cart</button> */}
-            <div className="width70">
-                <GroceryMapper groceryItem={groceryItem} onAdd={onAdd} key={groceryItem.id} />
-                {/* {groceryItem} */}
+            <div className="">
+
+                <div className="" style={{ width: "100%" }}>
+                    {/* {groceryItem.map(product => {
+                        return <div className="marginright2 margintop " key={product.id}>
+
+                            <div className="">
+                                <h4>{product.groceryCo}</h4>
+                            </div>
+                            <div className="">
+                                <strong> ${product.groceryCost.toFixed(2)} </strong>
+                            </div>
+                            <div className="">
+                                <img src={product.groceryUrl} alt="productimage" style={{ width: "120px" }}></img>
+                            </div>
+                            <button onClick={() => onAdd(product)} >Add to Cart</button>
+                        </div>
+                    })} */}
+
+                    <GroceryMapper groceryItem={groceryItem} onAdd={onAdd} key={groceryItem.id} />
+                    {/* {groceryItem} */}
+                </div>
             </div>
         </div>
     )

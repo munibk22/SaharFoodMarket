@@ -1,13 +1,13 @@
 import { Button } from 'react-bootstrap';
-import React from 'react'
+import React, { useState } from 'react'
 
 export const CartBasket = (props) => {
     const { cartItems, onAdd, onRemove } = props;
-    const itemsPrice = cartItems.reduce((a, c) => { return a + c.price * c.qty }, 0);
+    const itemsPrice = cartItems.reduce((a, c) => { return a + c.cost * c.qty }, 0);
 
     const shippingPrice = itemsPrice > 60 ? 0 : 10;
     const totalPrice = itemsPrice + shippingPrice;
-
+    const [checkout, setCheckOut] = useState(false);
 
     return (
         <aside className="">
@@ -23,18 +23,19 @@ export const CartBasket = (props) => {
 
             {cartItems.map((item) => {
                 return <div key={item.id} className="flexcol alignitems">
-                    <img className="" style={{ width: "100px" }} src={item.image} alt="">
+                    <img className="" style={{ width: "100px" }} src={item.img} alt="">
 
                     </img>
                     <div className="">
                         {item.name}
                     </div>
                     <div className="padding2">
-                        <button className="btn btn-primary btn-small " onClick={() => onAdd(item)}>+</button> {" "}
-                        <button className="btn btn-danger btn-small" onClick={() => onRemove(item)}>-</button>
+                        <button className="btn btn-danger btn-small" onClick={() => onRemove(item)}>-</button>{" "}
+                        <button className="btn btn-primary btn-small " onClick={() => onAdd(item)}>+</button>
+
                     </div>
                     <div className="">
-                        {item.qty} x ${item.price}
+                        {item.qty} x ${item.cost}
                     </div>
                 </div>
             })}

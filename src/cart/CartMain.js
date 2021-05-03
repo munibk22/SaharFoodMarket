@@ -21,12 +21,12 @@ export const CartMain = (props) => {
                             <h4>{product.name}</h4>
                         </div>
                         <div className="">
-                            <strong> ${product.price.toFixed(2)} </strong>
+                            <strong> ${product.cost.toFixed(2)} </strong>
                         </div>
                         <div className="">
-                            <img src={product.image} alt="productimage" style={{ width: "120px" }}></img>
+                            <img src={product.img} alt="productimage" style={{ width: "120px" }}></img>
                         </div>
-                        <button onClick={() => onAdd(product)}>Add to Cart</button>
+                        <button onClick={() => onAdd(product)} >Add to Cart</button>
                     </div>
                 })}
             </div>

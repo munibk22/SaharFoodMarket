@@ -20,7 +20,7 @@ export default function HomeBody(props) {
             <h1>Grocery Items</h1>
             <button className="btn btn-warning" onClick={test}>test to Cart</button>
             <div className="width70">
-                <GroceryMapper groceryItem={groceryItem} onAdd={onAdd} />
+                <GroceryMapper groceryItem={groceryItem} onAdd={onAdd} key={groceryItem.groceryID} />
                 {/* {groceryItem} */}
             </div>
         </div>
