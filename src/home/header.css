@@ -42,7 +42,7 @@ background: linear-gradient(to bottom,#f1e5ce, #b99a42 100% );
         }
     
         .container{
-            width:70vw;
+            width:70vw !important;
 
         }
 

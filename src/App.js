@@ -59,25 +59,24 @@ function App() {
 
         <Header />
         <NaviBar />
-        <Switch>
 
 
-          <div className="flex justify" style={{}}>
-            <Route exact path="/"><Home onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} /> </Route>
-            <Route path="/rice" component={Rice} />
-            <Route path="/inserthomebody" component={InsertHomeBody} />
-            <Route path="/insert" component={InsertList} />
-            <Route path="/postrice" component={PostRice} />
-            <Route path="/lentils" component={Lentils} />
-            <Route path="/postlentils" component={PostLentil} />
-            <Route path="/postoils" component={PostOil} />
-            <Route path="/cart" component={CartHeader} />
-            <Route path="/checkout" component={Checkout} />
 
-          </div>
+        <div className="flex justify" style={{}}>
+          <Route exact path="/"><Home onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} /> </Route>
+          <Route path="/rice" component={Rice} />
+          <Route path="/inserthomebody" component={InsertHomeBody} />
+          <Route path="/insert" component={InsertList} />
+          <Route path="/postrice" component={PostRice} />
+          <Route path="/lentils" component={Lentils} />
+          <Route path="/postlentils" component={PostLentil} />
+          <Route path="/postoils" component={PostOil} />
+          <Route path="/cart" component={CartHeader} />
+          <Route path="/checkout" component={Checkout} />
 
-          <Footer />
-        </Switch>
+        </div>
+
+        <Footer />
       </div>
 
     </BrowserRouter>
