@@ -62,11 +62,11 @@ background: linear-gradient(to bottom,#f1e5ce, #b99a42 100% );
 
                   @media (max-Width:450px){
                       .container{
-                          width:80vw;
+                          width:80vw !important;
 
                       }
                       .header{
-                          height:44vh;
+                          height:41vh;
 
                       }
                   }
