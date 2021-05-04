@@ -25,7 +25,7 @@ export const Header = (props) => {
 
 
                 <div className="">
-                    <table id='title' border="4" bordercolor="#ff0000" style={{ backgroundColor: "white", width: "60vw", maxWidth: "480px", padding: "5%" }}>
+                    <table id='title' border="4" bordercolor="#ff0000" style={{ backgroundColor: "white", width: "0vw", maxWidth: "480px", padding: "5%" }}>
                         <tbody >
                             <tr>
                                 <td align="center" className="padding2">  <h1 style={{ marginBottom: "-3px", fontWeight: "600" }}> Sahar's International Food </h1>
