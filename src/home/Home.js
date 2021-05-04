@@ -11,13 +11,12 @@ export const Home = (props) => {
     return (
         <div>
 
-            {/* <Header cartItems={cartItems} onAdd={onAdd} />
-            <NaviBar /> */}
-            {/* <HomeBody onAdd={onAdd} test={test} /> */}
+            {/* <Header cartItems={cartItems} onAdd={onAdd} /> */}
+
             <HomeBodyC onAdd={onAdd} />
-            <div className="padding2 width80 block flexcol alignitems " style={{ maxWidth: "280px" }}>
-                <CartBasket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />
-            </div>
+            {cartItems.length > 0 ? <div className="padding2 width80 block flexcol alignitems " style={{ maxWidth: "280px" }}>
+                <CartBasket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} key={cartItems.id} />
+            </div> : null}
 
         </div>
     )

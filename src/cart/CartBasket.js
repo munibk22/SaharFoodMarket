@@ -23,7 +23,7 @@ export const CartBasket = (props) => {
 
             {cartItems.map((item) => {
                 return <div key={item.id} className="flexcol alignitems">
-                    <img className="" style={{ width: "100px" }} src={item.img} alt="">
+                    <img className="" style={{ width: "80px" }} src={item.img} alt="">
 
                     </img>
                     <div className="">

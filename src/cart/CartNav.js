@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const CartNav = () => {
     return (
@@ -16,9 +17,9 @@ export const CartNav = () => {
                     <form action="/logout?_method=DELETE" method="POST"> <Button href="http://localhost:3001/logout" variant="outline-danger" className="btn btn-sm ">logout</Button> </form>
                 </div>
 
-                <div className="" style={{ padding: '.5%' }}>
-                    <Button href="" variant="outline-primary" className="btn btn-md"><i className="fas fa-shopping-cart"></i>{" "}{" "}Shopping Cart</Button>
-                </div>
+                <Link to="/cart" style={{ padding: '.5%' }}>
+                    <Button href="" variant="outline-primary" className="btn btn-sm" style={{ fontSize: "" }}><i className="fas fa-shopping-cart" style={{ fontSize: "" }}></i>{" "}{" "}<strong>Shopping Cart</strong></Button>
+                </Link>
             </div>
         </div>
     )

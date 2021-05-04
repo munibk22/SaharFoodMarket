@@ -24,24 +24,27 @@ export const Header = (props) => {
             <div className="header App flexcol alignitems  " style={{ marginTop: '2%' }}>
 
 
-                <table id='title' border="4" bordercolor="#ff0000" style={{ backgroundColor: "white", maxWidth: "80vw", padding: "5%" }}>
-                    <tbody >
-                        <tr>
-                            <td align="center" className="padding2">  <h1 style={{ marginBottom: "-3px", fontWeight: "600" }}> Sahar's International Food </h1>
+                <div className="">
+                    <table id='title' border="4" bordercolor="#ff0000" style={{ backgroundColor: "white", width: "60vw", maxWidth: "480px", padding: "5%" }}>
+                        <tbody >
+                            <tr>
+                                <td align="center" className="padding2">  <h1 style={{ marginBottom: "-3px", fontWeight: "600" }}> Sahar's International Food </h1>
 
-                                <div className="flex justify alignitems " >
-                                    <img src={Pak} style={{ width: "90px" }} className="padding1 marginright1" alt="header img" />
-                                    <h1 className="padding1 marginright1" style={{ marginBottom: "-3px", fontWeight: "600" }}>Market</h1>
-                                    <img src={Palm} style={{ width: "90px" }} alt="header img" />
-                                </div>
+                                    <div className="flex justify alignitems " >
+                                        <img src={Pak} style={{ width: "90px" }} className="padding1 marginright1" alt="header img" />
+                                        <h1 className="padding1 marginright1" style={{ marginBottom: "-3px", fontWeight: "600" }}>Market</h1>
+                                        <img src={Palm} style={{ width: "90px" }} alt="header img" />
+                                    </div>
 
 
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                </td>
+                            </tr>
+                        </tbody >
+                    </table>
+                </div>
 
-                <div className="flexwrap width50 " style={{ marginTop: '1%' }}>
+
+                <div className="flex width50 " style={{ marginTop: '1%' }}>
                     <hr></hr>
                 </div>
 

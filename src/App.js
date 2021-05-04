@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from './home/Home';
 import { NaviBar } from './components/NaviBar';
 import { Header } from './home/Header';
@@ -15,6 +15,7 @@ import { CartHeader } from './cart/CartHeader';
 import { Checkout } from './cart/Checkout';
 import { Footer } from './home/Footer';
 import { useState } from 'react';
+import "./default.css"
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
   // function test() { console.log("test") };
 
   const onAdd = (product) => {
-    console.log(product.id);
+    // console.log(product.id);
     const exist = cartItems.find((x) => x.id === product.id)
     if (exist) {
       setCartItems(cartItems.map((x) => x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x))
@@ -58,25 +59,27 @@ function App() {
 
         <Header />
         <NaviBar />
+        <Switch>
 
 
+          <div className="flex justify" style={{}}>
+            <Route exact path="/"><Home onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} /> </Route>
+            <Route path="/rice" component={Rice} />
+            <Route path="/inserthomebody" component={InsertHomeBody} />
+            <Route path="/insert" component={InsertList} />
+            <Route path="/postrice" component={PostRice} />
+            <Route path="/lentils" component={Lentils} />
+            <Route path="/postlentils" component={PostLentil} />
+            <Route path="/postoils" component={PostOil} />
+            <Route path="/cart" component={CartHeader} />
+            <Route path="/checkout" component={Checkout} />
 
-        <div className="flex justify" style={{}}>
-          <Route exact path="/"><Home onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} /> </Route>
-          <Route path="/rice" component={Rice} />
-          <Route path="/inserthomebody" component={InsertHomeBody} />
-          <Route path="/insert" component={InsertList} />
-          <Route path="/postrice" component={PostRice} />
-          <Route path="/lentils" component={Lentils} />
-          <Route path="/postlentils" component={PostLentil} />
-          <Route path="/postoils" component={PostOil} />
-          <Route path="/cart" component={CartHeader} />
-          <Route path="/checkout" component={Checkout} />
+          </div>
 
-        </div>
-
-        <Footer />
+          <Footer />
+        </Switch>
       </div>
+
     </BrowserRouter>
   );
 }

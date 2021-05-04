@@ -5,12 +5,13 @@ import { GroceryMapper } from '../mapper/GroceryMapper';
 export const HomeBodyC = (props) => {
     const [groceryItem, setGroceryItem] = useState([]);
     const { onAdd } = props;
+    const [loading, setLoading] = useState(false);
+    const [err, setErr] = useState(false);
+
 
     useEffect(() => {
         axios.get("https://saharserver.herokuapp.com/getgrocery").then((res, req) => {
-
             setGroceryItem(res.data);
-
         })
     }, [])
 

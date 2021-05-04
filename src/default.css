@@ -1,7 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+    
+}
+.hamburger{
+    width:30px ;
+    height:30px;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.hamburger > div{
+    width:100% ;
+    height:3px;
+  background-color: white;
+}
+
+.hamburger:hover >div{
+    background: darkblue;
+}
+
+@media (max-width:600){
+    .navlinks{
+        display:none;
+    }
+    .hamburger{
+        display: flex;
+    }
+}
 html{
     /* overflow-x: hidden ;  */
     max-width: 100vw;
     box-sizing: border-box;
+    
 }
 body{
     margin:0;
