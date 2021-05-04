@@ -15,12 +15,12 @@ export const NaviBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav "  >
                 <Nav className="mr-auto nvbar flex justifyaround width60 textalign" >
-                    <Nav.Link to="/" style={{ color: "white" }}>Home</Nav.Link>
-                    <Nav.Link to="/rice" style={{ color: "white" }}>Rice</Nav.Link>
-                    <Nav.Link to="/lentils" style={{ color: "white" }}>Lentils/Beans</Nav.Link>
-                    <Nav.Link to="/oils" style={{ color: "white" }}>Oils/Ghee</Nav.Link>
-                    <Nav.Link to="/spice" style={{ color: "white" }}>Spices</Nav.Link>
-                    <Nav.Link to="/bread" style={{ color: "white" }}>Breads/Roti</Nav.Link>
+                    <Link to="/" style={{ color: "white", padding: ".9%" }}>Home</Link>
+                    <Link to="/rice" style={{ color: "white", padding: ".9%" }}>Rice</Link>
+                    <Link to="/lentils" style={{ color: "white", padding: ".9%" }}>Lentils/Beans</Link>
+                    <Link to="/oils" style={{ color: "white", padding: ".9%" }}>Oils/Ghee</Link>
+                    <Link to="/spice" style={{ color: "white", padding: ".9%" }}>Spices</Link>
+                    <Link to="/bread" style={{ color: "white", padding: ".9%" }}>Breads/Roti</Link>
 
                 </Nav>
 
