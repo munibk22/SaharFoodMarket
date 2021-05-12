@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
-import { GroceryMapper } from '../mapper/GroceryMapper';
+// import { GroceryMapperB } from '../mapper/GroceryMapperB';
+import { connect } from "react-redux";
+import { addBasket } from "../store/actions/actions"
 
-export const HomeBodyC = (props) => {
+const HomeBodyC = (props) => {
     const [groceryItem, setGroceryItem] = useState([]);
-    const { onAdd } = props;
-    const [loading, setLoading] = useState(false);
-    const [err, setErr] = useState(false);
+    const { onAdd, addToBasket } = props;
+    // const [loading, setLoading] = useState(false);
+    // const [err, setErr] = useState(false);
+
+
 
 
     useEffect(() => {
@@ -22,26 +26,52 @@ export const HomeBodyC = (props) => {
             <div className="">
 
                 <div className="" style={{ width: "100%" }}>
-                    {/* {groceryItem.map(product => {
-                        return <div className="marginright2 margintop " key={product.id}>
+                    <div className="flexwrap justify" style={{ maxWidth: '1200px' }}>
 
-                            <div className="">
-                                <h4>{product.groceryCo}</h4>
-                            </div>
-                            <div className="">
-                                <strong> ${product.groceryCost.toFixed(2)} </strong>
-                            </div>
-                            <div className="">
-                                <img src={product.groceryUrl} alt="productimage" style={{ width: "120px" }}></img>
-                            </div>
-                            <button onClick={() => onAdd(product)} >Add to Cart</button>
-                        </div>
-                    })} */}
+                        {groceryItem.map((grocery) => {
+                            return <div className="marginright2 margintop " key={grocery.id} >
 
-                    <GroceryMapper groceryItem={groceryItem} onAdd={onAdd} key={groceryItem.id} />
+                                <div className="flexcol alignitems" style={{ width: '210px', }}  >
+
+                                    <div className="" style={{ height: '4rem', }}>
+                                        {grocery.name}  {' '}
+                                        {grocery.title}-{grocery.size}
+                                    </div>
+
+                                    <img className=" " style={{ width: "200px", height: '200px', objectFit: 'contain' }} src={grocery.img} alt='grocery url' />
+
+                                    <div className="margintop">
+                                        ${grocery.cost}
+                                    </div>
+
+
+                                    <div className="margintop">
+                                        <button className="btn btn-warning"
+                                            onClick={() => { addToBasket(grocery); onAdd(grocery); }}
+                                            // onClick={() => { addToBasket(grocery) }}
+                                            // onClick={addToBasket}
+                                            key={grocery.id}>Add to Cart</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        })}
+                    </div>
+
+
+                    {/* <GroceryMapperB groceryItem={groceryItem} onAdd={onAdd} key={groceryItem.id} /> */}
                     {/* {groceryItem} */}
                 </div>
             </div>
         </div>
     )
 }
+
+// const mapStateToProps = state => {
+//     return {
+//         products: state.shop.products
+//     }
+// }
+
+export default connect(null, { addBasket })(HomeBodyC);

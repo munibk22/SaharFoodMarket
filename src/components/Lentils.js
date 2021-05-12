@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { LentilMapper } from '../mapper/LentilMapper';
+import LentilMapper from '../mapper/LentilMapper';
+import { connect } from "react-redux";
+import { addBasket } from "../store/actions/actions"
 
-
-export const Lentils = () => {
+const Lentils = (props) => {
     const [lentilItem, setLentilItem] = useState([]);
-
+    const { addToBasket } = props;
 
     useEffect(() => {
         axios.get("https://saharserver.herokuapp.com/getlentils")
@@ -27,8 +28,10 @@ export const Lentils = () => {
             </div>
 
             <div className="  width70">
-                <LentilMapper lentilItem={lentilItem} />
+                <LentilMapper lentilItem={lentilItem} addToBasket={addToBasket} />
             </div>
         </div>
     )
 }
+
+export default connect(null, { addBasket })(Lentils);

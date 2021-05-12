@@ -1,11 +1,17 @@
 import React from 'react'
+import { connect } from "react-redux";
+import { addBasket } from "../store/actions/actions"
 
-export const LentilMapper = (props) => {
+const LentilMapper = (props) => {
+    const { addToBasket } = props;
+
+
+    const test = () => console.log("lentil button");
     return (
         <div>
 
 
-            <div className="flexwrap " style={{ maxWidth: '1200px' }}>
+            <div className="flexwrap justify" style={{ maxWidth: '1200px' }}>
                 {props.lentilItem.map((lentil) => {
                     return <div className="marginright2 margintop " key={lentil.lentilId} style={{ marginLeft: '' }} >
 
@@ -24,7 +30,15 @@ export const LentilMapper = (props) => {
 
                             <div className="margintop">
 
-                                <button className="btn btn-warning" >Add to Cart</button>
+                                <button className="btn btn-warning"
+                                    onClick={addToBasket}
+
+                                // onClick={() => {
+                                //     console.log("lentil button");
+                                //     addToBasket(lentil);
+                                // }}
+
+                                >Add to Cart</button>
                             </div>
 
                         </div>
@@ -38,4 +52,6 @@ export const LentilMapper = (props) => {
 
     )
 }
+
+export default connect(null, { addBasket })(LentilMapper);
 

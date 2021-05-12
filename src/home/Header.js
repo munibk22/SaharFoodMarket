@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { React } from 'react'
 import './header.css';
 import Pak from "../pics/pak.png";
 import Palm from "../pics/palmtree3.png";
-import { CartNav } from '../cart/CartNav';
+import CartNav from '../cart/CartNav';
 import { Link } from 'react-router-dom';
 
 
@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 export const Header = (props) => {
+    const { addToBasket, cartItems, basketNumbers } = props;
 
 
 
@@ -18,17 +19,18 @@ export const Header = (props) => {
         <div className="" >
 
             <Link to="/cart" className="" style={{ marginRight: "15px" }}>
-                <CartNav />
+                <CartNav addToBasket={addToBasket} cartItems={cartItems} basketNumbers={basketNumbers} />
             </Link>
 
             <div className="header App flexcol alignitems  " style={{ marginTop: '2%' }}>
 
 
                 <div className="">
-                    <table id='title' border="4" bordercolor="#ff0000" style={{ backgroundColor: "white", width: "90vw", maxWidth: "480px", padding: "5%" }}>
+                    <table id='title' border="4" bordercolor="#ff0000"
+                        style={{ backgroundColor: "white", width: "90vw", maxWidth: "480px", padding: "5%", height: "150px" }}>
                         <tbody >
                             <tr>
-                                <td align="center" className="padding2">  <h1 style={{ marginBottom: "-3px", fontWeight: "600" }}> Sahar's International Food </h1>
+                                <td align="center" className="" >  <h1 style={{ marginBottom: "-3px", fontWeight: "600", padding: "3%" }}> Sahar's International Food </h1>
 
                                     <div className="flex justify alignitems " >
                                         <img src={Pak} style={{ width: "90px" }} className="padding1 marginright1" alt="header img" />

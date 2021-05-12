@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { connect } from "react-redux";
+
 
 export const GroceryMapper = (props) => {
     const { onAdd, groceryItem } = props;
     const test = () => { console.log("test"); }
+
+    // const mapStateToProps = state ()=>
+
+
     return (
         <div>
 
