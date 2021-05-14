@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getNumbers } from '../store/actions/actions';
 
 
+
 const CartNav = (props) => {
-    const { basketNumbers, basketProps } = props;
+    // const { basketNumbers, basketProps } = props;
+    console.log(props);
+
+
+    useEffect(() => {
+        getNumbers();
+    }, [])
 
     return (
         <div className="" style={{ marginRight: "15px" }}>
@@ -22,7 +29,8 @@ const CartNav = (props) => {
                 </div>
 
                 <Link to="/cart" style={{ padding: '.5%' }}>
-                    <Button variant="outline-primary" className="btn btn-sm" style={{ fontSize: "" }}><i className="fas fa-shopping-cart" style={{ fontSize: "" }}></i>{" "}{" "}<strong>Shopping Cart {props.basketProps}</strong> </Button>
+                    <Button variant="outline-primary" className="btn btn-sm" style={{ fontSize: "" }}><i className="fas fa-shopping-cart" style={{ fontSize: "" }}></i>{" "}{" "}<strong>Shopping Cart {props.basketNumbers}
+                    </strong> </Button>
                 </Link>
             </div>
 

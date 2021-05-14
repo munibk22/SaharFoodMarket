@@ -12,7 +12,7 @@ export const basketReducer = (state = initialState, action) => {
             console.log("added")
             return {
 
-                basketNumbers: this.basketNumbers + 1
+                basketNumbers: state.basketNumbers + 1
             }
         case GET_NUMBERS:
             return {
