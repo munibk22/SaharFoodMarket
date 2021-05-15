@@ -97,13 +97,13 @@ function App() {
           </Switch>
 
         </div>
-        <div className="margintop flex justify ">
+        {/* <div className="margintop flex justify ">
           {cartItems.length > 0 ? <div className="padding2 width80 block flexcol alignitems " style={{ maxWidth: "290px" }}>
             <CartBasket cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}
 
               key={cartItems.id} />
           </div> : null}
-        </div>
+        </div> */}
         <Footer />
       </div>
 
