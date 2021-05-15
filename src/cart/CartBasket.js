@@ -177,7 +177,7 @@ export const CartBasket = (props) => {
                 <div className="flex justify margintop10 " >
                     <StripeCheckout
                         stripeKey="pk_live_51Ir9CYBbKPDTbStS9MNHhAQ5SukiFbASeC3JrqNoV8kRz0nzXI08Zgl5HS7x1dLLTCQA3RGXVHWt31VAvBKAByGI00sOhlwst0"
-                        // "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"
+
                         token={makePayment}
                         billingAddress
                         shippingAddress
